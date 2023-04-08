@@ -26,5 +26,12 @@ This tool validates, gives suggestions and reformats your data:
 ``` openai tools fine_tunes.prepare_data -f <LOCAL_FILE> ``` 
 
 ## Create fine-tuned model
+You can choose between 3 Base models: *Curie*, *Ada*, *Baddage*
+
+*Curie* is the most powerful model, with the largest size and highest computational power.
+
+*Ada* is a medium-power model that can generate texts of moderate complexity and quality. Less time and resources to train than Curie.
+
+*Babbage* is the lowest-power model, with the smallest size and computational power. It can generate texts of low complexity and quality, but requires the least amount of time and resources to train.
 
 ``` openai api fine_tunes.create -t <TRAIN_FILE_ID_OR_PATH> -m <BASE_MODEL> ```
