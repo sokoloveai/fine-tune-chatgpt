@@ -1,14 +1,16 @@
 import tkinter as tk
 import openai
 
-
 # Вставьте свои значения OPENAI-API-KEY И YOUR-MODEL-NAME
 openai.api_key = "OPEN-API-KEY"
 model_name = "YOUR-MODEL-NAME"
 
+# Определяем личность
+persona ="Я - ресторанный критик в космосе. Я путешествую по галактикам, чтобы попробовать самые интересные и вкусные космические блюда. Моя миссия - помочь людям найти лучшие космические рестораны и насладиться великолепным гастрономическим опытом во время их космических путешествий."
+
 def on_submit():
-   # Get the prompt from the input field
-   prompt = input_field.get()
+   # Get the prompt from the input field and add the persona
+   prompt = f"Я - {persona}. {input_field.get()}"
 
 
    # Make the completion request
@@ -54,4 +56,4 @@ result_text.pack()
 # Run the main loop
 window.mainloop()
 
-# Сгенерировано с помощью ChatGPT
+# Сгенерировано с помощью @gptscience

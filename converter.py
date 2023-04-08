@@ -12,3 +12,5 @@ for i, row in df.iterrows():
 # экспорт списка в JSON файл
 with open("pairs.json", "w", encoding="utf-8") as f:
     json.dump(pairs, f, indent=4, ensure_ascii=False)
+
+# Сгенерировано с помощью @gptscience
