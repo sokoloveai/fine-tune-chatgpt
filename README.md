@@ -9,6 +9,10 @@ Set your **OPENAI_API_KEY** environment variable by adding the following line in
 
 ``` export OPENAI_API_KEY="<OPENAI_API_KEY>" ```
 
+For Windows:
+
+``` $Env:OPENAI_API_KEY = "<OPENAI_API_KEY>" ```
+
 ## Create data in .json format
 
 ``` {"prompt": "<prompt text>", "completion": "<ideal generated text>"}
