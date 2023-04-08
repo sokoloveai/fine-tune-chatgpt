@@ -39,3 +39,5 @@ You can choose between 3 Base models: *Curie*, *Ada*, *Baddage*
 *Babbage* is the lowest-power model, with the smallest size and computational power. It can generate texts of low complexity and quality, but requires the least amount of time and resources to train.
 
 ``` openai api fine_tunes.create -t <TRAIN_FILE_ID_OR_PATH> -m <BASE_MODEL> ```
+
+### *Сгенерировано с помощью @gptscience
