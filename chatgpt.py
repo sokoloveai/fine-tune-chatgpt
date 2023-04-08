@@ -2,8 +2,8 @@ import tkinter as tk
 import openai
 
 
-# Вставьте свои значения
-openai.api_key = "OPENAI-API-KEY"
+# Вставьте свои значения OPENAI-API-KEY И YOUR-MODEL-NAME
+openai.api_key = "OPEN-API-KEY"
 model_name = "YOUR-MODEL-NAME"
 
 def on_submit():
@@ -12,7 +12,7 @@ def on_submit():
 
 
    # Make the completion request
-   completion = openai.Completion.create(model=model_name, prompt=prompt, max_tokens=150)
+   completion = openai.Completion.create(model=model_name, prompt=prompt, max_tokens=500)
 
 
    # Clear the input field
@@ -32,23 +32,26 @@ def on_submit():
 
 # Create the main window
 window = tk.Tk()
-window.title("Fine-tuned GPT-3")
+window.title("Fine-tuned @gptscience")
+window.geometry("800x600")
 
 
 # Create the input field and submit button
-input_field = tk.Entry(window)
+input_field = tk.Entry(window, width=120)
 submit_button = tk.Button(window, text="Submit", command=on_submit)
 
 
 # Create the result text area
-result_text = tk.Text(window, state="normal", width=80, height=20)
+result_text = tk.Text(window, state="normal", width=110, height=30)
 
 
 # Add the input field, submit button, and result text area to the window
-input_field.pack()
-submit_button.pack()
+input_field.pack(pady=20)
+submit_button.pack(pady=10)
 result_text.pack()
 
 
 # Run the main loop
 window.mainloop()
+
+# Сгенерировано с помощью ChatGPT
